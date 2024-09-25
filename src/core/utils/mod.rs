@@ -342,14 +342,14 @@ pub fn verify_existing_installation(
 
 pub fn verify_checksum(
     response: &bytes::Bytes,
-    expeced_checksum: &str,
+    expected_checksum: &str,
 ) -> Result<(bool, Option<String>)> {
     // begin
     // there are only 2 supported algorithms
     // sha1 and sha512
     // so we can be sure that if it doesn't start with sha1, it's going to have to be sha512
 
-    let algorithm = if expeced_checksum.starts_with("sha1") {
+    let algorithm = if expected_checksum.starts_with("sha1") {
         Algorithm::Sha1
     } else {
         Algorithm::Sha512
@@ -357,7 +357,7 @@ pub fn verify_checksum(
 
     let calculated_checksum = VoltConfig::calc_hash(response, algorithm)?;
 
-    if calculated_checksum == expeced_checksum {
+    if calculated_checksum == expected_checksum {
         Ok((true, None))
     } else {
         Ok((false, Some(calculated_checksum)))

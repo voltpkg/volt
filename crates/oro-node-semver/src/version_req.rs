@@ -667,7 +667,7 @@ where
     move |input: &'a str| {
         context(
             "hyphenated",
-            map(tuple((&left, spaced_hypen, &right)), |(l, _, r)| (l, r)),
+            map(tuple((&left, spaced_hyphen, &right)), |(l, _, r)| (l, r)),
         )(input)
     }
 }
@@ -725,7 +725,7 @@ fn no_operation_followed_by_version<'a>(
     )(input)
 }
 
-fn spaced_hypen<'a>(input: &'a str) -> IResult<&'a str, (), SemverParseError<&'a str>> {
+fn spaced_hyphen<'a>(input: &'a str) -> IResult<&'a str, (), SemverParseError<&'a str>> {
     map(tuple((space0, tag("-"), space0)), |_| ())(input)
 }
 

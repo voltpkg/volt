@@ -224,20 +224,20 @@ impl VoltCommand for Watch {
         //     progress_bar.finish_with_message("");
 
         // let node_modules = read_dir("node_modules").unwrap();
-        // let mut availiable_modules: Vec<String> = vec![];
+        // let mut available_modules: Vec<String> = vec![];
 
         // for entry in node_modules {
         //     let entry = entry.unwrap();
         //     if entry.path().is_dir() {
         //         let path = entry.file_name().to_str().unwrap().to_string();
-        //         availiable_modules.push(path);
+        //         available_modules.push(path);
         //     }
         // }
 
         // let mut missing_modules: Vec<String> = vec![];
 
         // for module in modules {
-        //     if !availiable_modules.contains(&module) {
+        //     if !available_modules.contains(&module) {
         //         missing_modules.push(module);
         //     }
         // }

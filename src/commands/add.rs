@@ -72,7 +72,7 @@ impl VoltCommand for Add {
                     requested,
                 } = package
                 {
-                    // recieve the version of a package that has been requested from the response
+                    // receive the version of a package that has been requested from the response
                     if *name == response.name {
                         requested_packages.push(PackageSpec::Npm {
                             scope: scope.to_owned(),

@@ -114,7 +114,7 @@ pub async fn get_volt_response(package_spec: &PackageSpec) -> Result<VoltRespons
 
 /// downloads and extracts tarball file from package
 pub async fn fetch_tarball(package: &VoltPackage, state: State) -> Result<bytes::Bytes> {
-    // Recieve the tarball from the npm registry
+    // Receive the tarball from the npm registry
     let response = state
         .http_client
         .get(&package.tarball)

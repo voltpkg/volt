@@ -3,7 +3,7 @@
 
 TODO:
 
-https://github.com/dart-lang/pub_semver/blob/master/lib/src/version_range.dart cotains a good impl of below operations needed for PubGrub
+https://github.com/dart-lang/pub_semver/blob/master/lib/src/version_range.dart contains a good impl of below operations needed for PubGrub
 
 
 * bool allowsAll(VersionConstraint other);

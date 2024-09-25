@@ -45,11 +45,11 @@ pub enum VoltError {
     // #[error("failed to decode lz4 encoded data")]
     // #[diagnostic(code(volt::decode::lz4::decode))]
     // DecodeError(#[source] std::io::Error),
-    #[error("failed to recieve response from the registry")]
+    #[error("failed to receive response from the registry")]
     #[diagnostic(code(volt::network))]
     NetworkError(isahc::Error),
 
-    // #[error("failed to recieve byte response")]
+    // #[error("failed to receive byte response")]
     // #[diagnostic(code(volt::network::rec))]
     // NetworkRecError(#[source] std::io::Error),
     #[error("failed to create directory")]
@@ -68,7 +68,7 @@ pub enum VoltError {
     #[diagnostic(code(volt::registry::volt::bad_request))]
     BadRequest { url: String },
 
-    #[error("GET {url} - {} - An unknown error occured. Please try again later.")]
+    #[error("GET {url} - {} - An unknown error occurred. Please try again later.")]
     #[diagnostic(code(volt::registry::volt::unknown_error))]
     NetworkUnknownError {
         url: String,
@@ -100,7 +100,7 @@ pub enum VoltError {
     #[diagnostic(code(volt::network::builder))]
     _RequestBuilderError(#[source] isahc::http::Error),
 
-    #[error("failed to build recieve response text")]
+    #[error("failed to build receive response text")]
     #[diagnostic(code(volt::io::rec::text))]
     _IoTextRecError(#[source] std::io::Error),
 
@@ -132,7 +132,7 @@ pub enum VoltError {
     #[diagnostic(code(volt::git::parse))]
     GitConfigParseError { error_text: String },
 
-    #[error("an unknown error occured.")]
+    #[error("an unknown error occurred.")]
     #[diagnostic(code(volt::unknown))]
     _UnknownError,
 }

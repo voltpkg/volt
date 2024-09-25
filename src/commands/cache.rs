@@ -38,7 +38,7 @@ pub struct Cache {}
 
 #[async_trait]
 impl Command for Cache {
-    /// Display a help menu for the `volt cahe` command.
+    /// Display a help menu for the `volt cache` command.
     fn help() -> String {
         format!(
             r#"volt {}
